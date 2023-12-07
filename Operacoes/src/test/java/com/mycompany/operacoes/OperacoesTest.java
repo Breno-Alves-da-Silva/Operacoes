@@ -13,12 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class OperacoesTest {
     
-    public OperacoesTest() {
-    }
 
-    @Test
-    public void testSomeMethod() {
-    }
     @Test
     public void testAdicao() {
         Calculadora calculadora = new Calculadora();
@@ -43,10 +38,9 @@ public class OperacoesTest {
     @Test
     public void testDivisao() {
         Calculadora calculadora = new Calculadora();
-        assertEquals(2.5, calculadora.divisao(5, 2), 0.001); // O terceiro parâmetro é a precisão aceitável
+        assertEquals(2.5, calculadora.divisao(5, 2), 0.001);
         assertEquals(0.0, calculadora.divisao(0, 5), 0.001);
         
-        // Testando a exceção para divisão por zero
         assertThrows(ArithmeticException.class, () -> calculadora.divisao(2, 0));
     }
     
